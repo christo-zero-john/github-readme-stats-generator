@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- myCss --> <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="defaults.css">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="utf-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Github Profile Generator</title>
+    
+  </head>
+  <body class="en-Oxanium">
+      <div id="componentDiv">
+          <button onclick="" class="btn btn-info">Github Statistics</button>
+      </div>
+
+<!-- start -->
+      <div class=" container-fluid pb-3 px-0 overflow-auto hd-70 no-scrollbar" id="editingDiv">
+        <p class="sticky-top bg-light display-5 text-capitalize text-center">Github stats Generator</p>
+  <!-- next -->
+        <section class="section p-2">
+          <fieldset class="fieldset  text-left">
+            <label class="label text-left px-4 py-2 fw-100" for="username">Enter your github username
+              <input class="input mx-2" id="username" type="text" placeholder="eg: christo-zero-john">
+            </label>
+          </fieldset>
+        
+    <!-- next -->
+          <fieldset class="fieldset text-left">
+            <label class="label text-left px-4 py-2 fw-100" for="cardWidth">Card Width:(current width: 500pixels)
+              <input class="input mx-2" type="number" placeholder="Minimum: 290" id="cardWidth">
+            </label>
+          </fieldset>  
+  
+    <!-- next -->
+          <fieldset class="fieldset text-left">
+            <label class="label text-left px-4 py-2 fw-100" for="customTitle">Custom Title:
+              <input class="input mx-2" type="text" placeholder="eg: Christo's Github Stats" id="customTitle">
+            </label>
+          </fieldset>
+         
+    <!-- next -->
+          <fieldset class="fieldset"> 
+            <label class="label text-left px-4 py-2 fw-100" for="hideRank" >Hide Rank:
+              <input class="input mx-2" type="checkbox" placeholder="" id="hideRank">
+            </label>
+          </fieldset>
+  
+    <!-- next -->
+          <fieldset class="fieldset">
+            <label class="label text-left px-4 py-2 fw-100" for="hideTitle" >Hide Title:
+              <input class="input mx-2" type="checkbox" id="hideTitle">
+            </label>
+          </fieldset>     
+        </section>   
+
+      <section class="section p-2">
+          <!-- next -->
+          <fieldset class="fieldset">
+            <p class="sectionTitle fw-300 h4 fw-bold text-danger">Hide Options:</p>
+          <label class="label text-left px-4 py-2 fw-100" for="stars">
+              <input class="input mx-2" id="stars" type="checkbox">Total Stars Earned
+          </label>
+          <label class="label text-left px-4 py-2 fw-100" for="commits">
+              <input class="input mx-2" id="commits" type="checkbox"> Total Commits(This Year):
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100" for="prs">
+              <input class="input mx-2" id="prs" type="checkbox">Total Pull Requests
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100" for="issues">
+              <input class="input mx-2" id="issues" type="checkbox"> Total Issues 
+          </label>
+            
+          <label class="label text-left px-4 py-2 fw-100" for="contribs">
+              <input class="input mx-2" id="contribs" type="checkbox"> Total Contributions
+          </label>
+        </fieldset>
+      </section>
+
+      <!-- next -->
+      <section class="section p-2">
+        <fieldset class="fieldset">
+            <p class="sectionTitle fw-300 h4 fw-bold text-danger">Add More Options</p>
+            <label class="label text-left px-4 py-2 fw-100" for="reviews">
+                <input class="input mx-2" id="reviews" type="checkbox"> Total Pull Requests Reviewed
+            </label>
+        
+            <label class="label text-left px-4 py-2 fw-100" for="discussions_started">
+                <input class="input mx-2" id="discussions_started" type="checkbox">Total Discussions Started
+            </label>
+
+            <label class="label text-left px-4 py-2 fw-100" for="discussions_answered">
+                <input class="input mx-2" id="discussions_answered" type="checkbox"> Total Discussions  Answered
+            </label>
+            
+            <label class="label text-left px-4 py-2 fw-100" for="prs_merged">
+                <input class="input mx-2" id="prs_merged" type="checkbox"> Total Pull Requests Merged
+            </label>
+            
+            <label class="label text-left px-4 py-2 fw-100" for="prs_merged_percentage">
+                <input class="input mx-2" id="prs_merged_percentage" type="checkbox"> Pull Requests Merge Percentage
+            </label>
+        </fieldset>
+        
+        <fieldset class="fieldset">
+              <label class="label text-left px-4 py-2 fw-100" for="showIcon"> Show Icons
+                <input class="input mx-2" id="showIcon" type="checkbox" checked>
+              </label>
+        </fieldset>
+      </section>
+
+      <!-- next -->
+      <section class="section p-2">
+        <fieldset class="fieldset">
+          <label class="label text-left px-4 py-2 fw-100" for="rankIconType"> rank Icon Type
+            <select class="select form-select m-0 px-5 text-left w-fit" name="" id="rankIconType">
+              <option value="default">Default</option>
+                <option value="github">Github</option>
+                <option value="percentile">Percentile</option>
+            </select>
+          </label>
+        </fieldset>
+    <!-- next -->
+        <fieldset class="fieldset text-left">
+            <label class="label text-left px-4 py-2 fw-100" for="lineHeight" >Line Height:
+              <input class="input mx-2" type="number" name="" id="lineHeight" min="25" value="25">
+            </label>
+        </fieldset>
+      <!-- next -->
+        <fieldset class="fieldset">
+          <label class="label text-left px-4 py-2 fw-100"  for="theme">Theme
+            <select class="select form-select m-0 px-5 text-left w-fit" name="theme" id="theme" >
+              <option value="transparent">transparent</option>
+              <option value="dark">dark</option>
+              <option value="radical">radical</option>
+              <option value="merko">merko</option>
+              <option value="gruvbox">gruvbox</option>
+              <option value="tokyonight">tokyonight</option>
+              <option value="onedark">onedark</option>
+              <option value="cobalt">cobalt</option>
+              <option value="synthwave">synthwave</option>
+              <option value="highcontrast">highcontrast</option>
+              <option value="dracula">dracula</option>
+            </select>
+          </label>
+        </fieldset>
+      </section>
+      <!-- next -->
+      <section class="section p-2">
+        <fieldset class="fieldset">
+          <label class="sectionTitle fw-300 h4 fw-bold text-danger label text-left px-4 py-2 fw-100"  for="customColors">Custom Colours <span class="small"></span>
+            <input class="input mx-2" type="checkbox" id="customColors"> 
+          </label>
+          <label class="label text-left px-4 py-2 fw-100" for="titleColor"  >Heading Color
+              <input class="input mx-2" type="color" id="titleColor" value="#006eff">
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100" for="backgroundColor" >Background Color
+              <input class="input mx-2" type="color" id="backgroundColor" value="#ffffff">
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100" for="textColor"  value="#407c84">Text Color
+              <input class="input mx-2" type="color" id="textColor" value="#407c84">
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100" for="iconColor" >Icon Color
+              <input class="input mx-2" type="color" id="iconColor"  value="#006eff">
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100" for="ringColor" >Ring Color
+              <input class="input mx-2" type="color" id="ringColor"  value="#00deff">
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100" for="borderColor" >Border Color
+              <input class="input mx-2" type="color" id="borderColor" value="#000000">
+          </label>
+        </fieldset>
+      </section>
+
+    <!-- next -->
+      <section class="section p-2">
+        <fieldset class="fieldset">
+          <label class="label text-left px-4 py-2 fw-100" for="hideBorder">Hide Border
+            <input class="input mx-2" type="checkbox" id="hideBorder">
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100 text-center"  for="borderRadius" >Border Radius
+            <input class="input mx-2" type="number" id="borderRadius" placeholder="Enter any number" min="0">
+          </label>
+
+          <label class="label text-left px-4 py-2 fw-100 text-center" for="numberFormat" >All Number Format
+            <select class="select form-select m-0 px-5 text-left w-fit" name="" id="numberFormat">
+              <option value="short">short</option>
+              <option value="long">long</option>
+            </select>
+          </label>
+      </fieldset>
+
+    <!-- next -->
+      <fieldset class="fieldset text-left">
+          <label class="label text-left px-4 py-2 fw-100" for="cardlang" >Card Language
+            <select class="select form-select m-0 px-5 text-left w-fit" name="cardLanguage" id="cardlang">
+                <option value="en">	English</option>
+                <option value="ml">Malayalam</option>
+                <option value="ar">Arabic</option>
+                <option value="cs">Czech</option>
+                <option value="de">German</option>
+                <option value="bn">	Bengali</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="cn">Chinese</option>
+                <option value="zh-tw">Chinese (Taiwan)</option>
+                <option value="hu">Hungarian</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="kr">	Korean</option>
+                <option value="nl">Dutch</option>
+                <option value="pt-pt">Portuguese (Portugal)</option>
+                <option value="pt-br">Portuguese (Brazil)</option>
+                <option value="np">Nepali</option>
+                <option value="el">Greek</option>
+                <option value="ru">	Russian</option>
+                <option value="uk-ua">Ukrainian</option>
+                <option value="id">	Indonesian</option>
+                <option value="my">Burmese</option>
+                <option value="sk">Slovak</option>
+                <option value="tr">Turkish</option>
+                <option value="pl">Polish</option>
+                <option value="uz">Uzbek</option>
+                <option value="vi">Vietnamese</option>
+                <option value="se">Swedish</option>
+                <option value=""></option>
+            </select>
+          </label> 
+        </fieldset>
+      </section>
+          
+          
+<!-- Next -->
+
+</div>
+<!-- end -->
+
+    <div id="previewDiv">        
+      <button class="btn btn-success d-block m-auto px-5 my-2" id="" onclick="statsCard()">Generate Card</button>
+        <p class="cardPreview fs-4">Card Preview</p>
+        <button class="btn btn-warning" oncluck="addCard">Add this Card:(Once added it cannot be removed)</button>
+    </div>
+    <div id="codeDiv">
+        <div id="codeDivHeader">
+          <p class="">Your profile template</p>
+          <button class="btn btn-dark" onclick="code('preview')">preview</button>
+          <button class="btn btn-info" onclick="code('code')">code</button>
+        </div>
+        <div id="codeDivContent">
+
+        </div>
+    </div>
+
+
+
+
+
+
+    
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- myScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
